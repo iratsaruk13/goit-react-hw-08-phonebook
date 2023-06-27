@@ -12,6 +12,7 @@ import {
 import { useDispatch} from "react-redux";
 
 import { logIn } from "redux/Auth/operationsAuth";
+import { Button } from "@mui/material";
 
 
 const schema = Yup.object().shape({
@@ -54,9 +55,9 @@ export default function Login () {
         <FormInput type="password" id="password" {...register("password")} />
         {errors.password && <Error> {errors.password?.message}</Error>}
       </div>
-      <FormContactBtn type="submit">
+      <Button variant="contained" color="success" type="submit">
         Login
-      </FormContactBtn>
+      </Button>
     </StyledForm>
   );
 };
