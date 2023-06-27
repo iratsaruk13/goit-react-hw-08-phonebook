@@ -68,7 +68,7 @@ export const FormContact = () => {
         {errors.number && <Error> {errors.number?.message}</Error>}
       </div>
       <FormContactBtn type="submit">
-        Add contact <FcPlus />{" "}
+        Add contact <FcPlus />
       </FormContactBtn>
     </StyledForm>
   );
