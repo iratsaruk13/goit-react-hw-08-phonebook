@@ -12,7 +12,6 @@ import { useDispatch } from "react-redux";
 
 import { registerAuth } from "redux/Auth/operationsAuth";
 import { Button, FormGroup } from "@mui/material";
-import { FormGroupInput, FormGroupLabel } from "./Register.styled";
 
 
 const schema = Yup.object().shape({
