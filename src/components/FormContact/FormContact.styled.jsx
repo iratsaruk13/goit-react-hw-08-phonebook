@@ -10,27 +10,20 @@ export const StyledForm = styled.form`
 export const FormLabel = styled.label`
   margin-right: auto;
   font-size: 20px;
-  color: #300339;
+  color: #1677FF;
 `;
 
 export const FormInput = styled.input`
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
   font-size: 16px;
-  color: #300339;
-  border-radius: 15px;
-  border: none;
-  &:hover,
+  color: #555;
+  outline: none;
+  min-width: 300px;
   &:focus {
-    border: 1px solid #a942d9;
-  }
-  padding: 15px;
-  width: 100%;
-  background-color: #e9d8f9;
-  &:hover {
-    background-color: #ddaaeb;
-  }
-  transition: box-shadow 250ms cubic-bezier(0.42, 0, 0.58, 1);
-  :hover {
-    box-shadow: 0 0 0 5px rgba(96, 0, 118, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-color: #1677FF;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   }
 `;
 

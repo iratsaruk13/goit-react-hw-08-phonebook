@@ -6,12 +6,13 @@ import {
   StyledForm,
   FormLabel,
   FormInput,
-  Error,
+  Error
 } from "../../components/FormContact/FormContact.styled";
 import { useDispatch } from "react-redux";
 
 import { registerAuth } from "redux/Auth/operationsAuth";
-import { Button } from "@mui/material";
+import { Button, FormGroup } from "@mui/material";
+import { FormGroupInput, FormGroupLabel } from "./Register.styled";
 
 
 const schema = Yup.object().shape({
@@ -45,21 +46,21 @@ export default function Register () {
   
   return (
     <StyledForm onSubmit={handleSubmit(onSubmit)}>
-      <div>
-        <FormLabel htmlFor="name">Name:</FormLabel>
+      <FormGroup>
+      <FormLabel htmlFor="name">Name:</FormLabel>
         <FormInput type="text" id="name" {...register("name")} />
         {errors.name && <Error> {errors.name?.message}</Error>}
-      </div>
-      <div>
+      </FormGroup>
+      <FormGroup>
         <FormLabel htmlFor="email">Email:</FormLabel>
         <FormInput type="email" id="email" {...register("email")} />
         {errors.email && <Error> {errors.email?.message}</Error>}
-      </div>
-      <div>
+      </FormGroup>
+      <FormGroup>
         <FormLabel htmlFor="password">Password:</FormLabel>
         <FormInput type="password" id="password" {...register("password")} />
         {errors.password && <Error> {errors.password?.message}</Error>}
-      </div>
+      </FormGroup>
       <Button variant="contained" color="success" type="submit">
         Register
       </Button>
