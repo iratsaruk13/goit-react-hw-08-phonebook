@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://iratsaruk13.github.io/goit-react-hw-08-phonebook/",
   "dependencies": {
+    "@ant-design/icons": "^5.1.4",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@hookform/resolvers": "^3.1.0",

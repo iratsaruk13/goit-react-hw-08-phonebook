@@ -1,8 +1,16 @@
 import React from 'react'
+import { AddIcon, CardIcon, HomeTitle, PhoneIcon, Wraper } from './Home.styled'
 
 const Home = () => {
   return (
-    <h1>Welcome to Home Page</h1>
+    <>
+      <HomeTitle>Welcome to the PhoneBook</HomeTitle>
+      <Wraper>
+        <PhoneIcon/>
+        <CardIcon/>
+        <AddIcon/>
+      </Wraper>
+    </>
   )
 }
 

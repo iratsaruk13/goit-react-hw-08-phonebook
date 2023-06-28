@@ -5,7 +5,19 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #f3e3f4;
+  background-color: #F1F3F4;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
 `;
 
 export const MainTitle = styled.h1`
