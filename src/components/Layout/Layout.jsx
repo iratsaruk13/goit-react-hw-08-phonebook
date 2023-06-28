@@ -1,3 +1,4 @@
+import { Container } from 'components/App.styled'
 import AppBar from 'components/AppBar/AppBar'
 import { Loader } from 'components/Loader/Loader'
 import React, { Suspense } from 'react'
@@ -6,7 +7,7 @@ import { Outlet } from 'react-router-dom'
 export const Layout = () => {
   return (
 
-    <div>
+    <Container>
         <AppBar />
         
         <Suspense fallback={<Loader/>}>
@@ -14,6 +15,6 @@ export const Layout = () => {
                 <Outlet />
             </main>
         </Suspense>
-    </div>
+    </Container>
   )
 }
