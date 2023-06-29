@@ -27,6 +27,7 @@ export const ContactsName = styled.p`
 export const ContactsButton = styled.button`
   width: 50px;
   height: 50px;
+  margin-left: 5px;
   cursor: pointer;
   display: flex;
   align-items: center;
