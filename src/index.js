@@ -12,11 +12,11 @@ const root = document.getElementById("root");
 ReactDOM.createRoot(root).render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-    <React.StrictMode>
-      <BrowserRouter basename="/goit-react-hw-08-phonebook">
-        <App />
-      </BrowserRouter>
-    </React.StrictMode>
+      <React.StrictMode>
+        <BrowserRouter basename="/goit-react-hw-08-phonebook">
+          <App />
+        </BrowserRouter>
+      </React.StrictMode>
     </PersistGate>
   </Provider>
 );

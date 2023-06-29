@@ -5,7 +5,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #F1F3F4;
+  background-color: #f1f3f4;
   width: 100%;
   padding: 20px;
   margin: 0 auto;
@@ -21,18 +21,10 @@ export const Container = styled.div`
 `;
 
 export const MainTitle = styled.h1`
-  font-size: 40px;
-  color: #5c057e;
-  margin-bottom: 20px;
-`;
-
-export const ContactsTitle = styled.h2`
-  font-size: 36px;
-  color: #5c057e;
-  margin-bottom: 20px;
-`;
-
-export const Message = styled.p`
-  font-size: 18px;
-  color: #5c057e;
+  color: #212121;
+  padding: 20px;
+  font-size: 24px;
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+  }
 `;

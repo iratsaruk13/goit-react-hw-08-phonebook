@@ -6,13 +6,17 @@ import {
   StyledForm,
   FormLabel,
   FormInput,
-  Error
+  Error,
+  FormGroup,
 } from "../../components/FormContact/FormContact.styled";
 import { useDispatch } from "react-redux";
 
 import { registerAuth } from "redux/Auth/operationsAuth";
-import { Button, FormGroup } from "@mui/material";
-
+import {
+  FormButton,
+  FormButtonSpan,
+  FormButtonSvg,
+} from "../../components/FormContact/FormContact.styled";
 
 const schema = Yup.object().shape({
   name: Yup.string().required("The field Name is required"),
@@ -20,11 +24,10 @@ const schema = Yup.object().shape({
   password: Yup.string()
     .required("The field Number is required")
     .min(7, "The number must be at least 7 digits long")
-    .max(14, "The number can consist of maximum 14 digits")
+    .max(14, "The number can consist of maximum 14 digits"),
 });
 
-export default function Register () {
-
+export default function Register() {
   const dispatch = useDispatch();
 
   const {
@@ -36,17 +39,16 @@ export default function Register () {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = ({name, password, email}) => {
+  const onSubmit = ({ name, password, email }) => {
     console.log(name, password, email);
-    dispatch(registerAuth({name, password, email }))
+    dispatch(registerAuth({ name, password, email }));
     reset();
   };
 
-  
   return (
     <StyledForm onSubmit={handleSubmit(onSubmit)}>
       <FormGroup>
-      <FormLabel htmlFor="name">Name:</FormLabel>
+        <FormLabel htmlFor="name">Name:</FormLabel>
         <FormInput type="text" id="name" {...register("name")} />
         {errors.name && <Error> {errors.name?.message}</Error>}
       </FormGroup>
@@ -60,9 +62,13 @@ export default function Register () {
         <FormInput type="password" id="password" {...register("password")} />
         {errors.password && <Error> {errors.password?.message}</Error>}
       </FormGroup>
-      <Button variant="contained" color="success" type="submit">
-        Register
-      </Button>
+      <FormButton type="submit">
+        <FormButtonSpan>Sigh up </FormButtonSpan>
+        <FormButtonSvg viewBox="0 0 13 10" height="10px" width="15px">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </FormButtonSvg>
+      </FormButton>
     </StyledForm>
   );
-};
+}

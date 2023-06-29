@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
+export const ContactsTitle = styled.h2`
+  color: #1677ff;
+  padding: 20px;
+  font-size: 24px;
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+  }
+`;
+
 export const ContactsList = styled.ul`
   display: flex;
   flex-direction: column;
@@ -11,21 +20,34 @@ export const ContactsItem = styled.li`
   justify-content: space-between;
 `;
 export const ContactsName = styled.p`
-  color: #300339;
+  color: #1677ff;
   font-size: 18px;
 `;
 
 export const ContactsButton = styled.button`
-  font-size: 20px;
-  font-weight: 500;
-  color: #300339;
-  background-color: #e1bbe3;
-  width: 100px;
-  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: red;
   border: none;
-  padding: 16px;
-  transition: box-shadow 250ms cubic-bezier(0.42, 0, 0.58, 1);
-  :hover {
-    box-shadow: 0 2px 5px rgba(51, 0, 66, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #e62222;
+  transition: 200ms;
+  &:hover {
+    background: #ff3636;
   }
+  &:focus {
+    outline: none;
+  }
+  :active {
+    transform: scale(0.8);
+  }
+`;
+
+export const ContactsButtonText = styled.span`
+  color: white;
+  font-weight: bold;
 `;

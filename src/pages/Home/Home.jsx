@@ -1,17 +1,18 @@
-import React from 'react'
-import { AddIcon, CardIcon, HomeTitle, PhoneIcon, Wraper } from './Home.styled'
+import React from "react";
+import { AddIcon, CardIcon, PhoneIcon, Wraper } from "./Home.styled";
+import { MainTitle } from "components/App.styled";
 
 const Home = () => {
   return (
     <>
-      <HomeTitle>Welcome to the PhoneBook</HomeTitle>
+      <MainTitle>Welcome to the PhoneBook</MainTitle>
       <Wraper>
-        <PhoneIcon/>
-        <CardIcon/>
-        <AddIcon/>
+        <PhoneIcon />
+        <CardIcon />
+        <AddIcon />
       </Wraper>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

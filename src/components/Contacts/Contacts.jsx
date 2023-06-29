@@ -4,8 +4,8 @@ import {
   ContactsItem,
   ContactsName,
   ContactsButton,
+  ContactsButtonText,
 } from "./Contacts.styled";
-import { BsTrash3 } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { selectContacts, selectFilters } from "../../redux/selectors";
 import { removeContact } from "../../redux/operations";
@@ -58,7 +58,7 @@ export const Contacts = () => {
                 {name}: {formattedNumber(number)}
               </ContactsName>
               <ContactsButton type="button" onClick={() => deleteContact(id)}>
-                <BsTrash3 />
+                <ContactsButtonText>Delete</ContactsButtonText>
               </ContactsButton>
             </ContactsItem>
           );

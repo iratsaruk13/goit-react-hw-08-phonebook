@@ -7,9 +7,10 @@ import {
   FormLabel,
   FormInput,
   Error,
-  FormContactBtn,
+  FormButton,
+  FormButtonSpan,
+  InputWrapper,
 } from "./FormContact.styled";
-import { FcPlus } from "react-icons/fc";
 import { useDispatch, useSelector } from "react-redux";
 import { selectContacts } from "../../redux/selectors";
 import { addContacts } from "../../redux/operations";
@@ -57,19 +58,20 @@ export const FormContact = () => {
 
   return (
     <StyledForm onSubmit={handleSubmit(onSubmit)}>
-      <div>
+      <InputWrapper>
         <FormLabel htmlFor="name">Name:</FormLabel>
         <FormInput type="text" id="name" {...register("name")} />
         {errors.name && <Error> {errors.name?.message}</Error>}
-      </div>
-      <div>
+      </InputWrapper>
+      <InputWrapper>
         <FormLabel htmlFor="number">Number:</FormLabel>
         <FormInput type="tel" id="number" {...register("number")} />
         {errors.number && <Error> {errors.number?.message}</Error>}
-      </div>
-      <FormContactBtn type="submit">
-        Add contact <FcPlus />
-      </FormContactBtn>
+      </InputWrapper>
+
+      <FormButton type="submit">
+        <FormButtonSpan>Add contact </FormButtonSpan>
+      </FormButton>
     </StyledForm>
   );
 };
