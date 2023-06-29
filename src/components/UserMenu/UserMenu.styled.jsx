@@ -51,3 +51,20 @@ export const LogOutBtn = styled.button`
     font-size: 18px;
   }
 `;
+
+export const UserMenuText = styled.p`
+  color: #1677ff;
+  @media screen and (min-width: 375px) {
+    font-size: 12px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
+
+
+`

@@ -2,7 +2,7 @@ import { useAuth } from "hooks/useAuth";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { logOut } from "redux/Auth/operationsAuth";
-import { LogOutBtn, UserMenuWrapper } from "./UserMenu.styled";
+import { LogOutBtn, UserMenuText, UserMenuWrapper } from "./UserMenu.styled";
 
 const UserMenu = () => {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ const UserMenu = () => {
   const handleLogOut = () => dispatch(logOut());
   return (
     <UserMenuWrapper>
-      <p> Welcome, {user.name}</p>
+      <UserMenuText> Welcome, {user.name}</UserMenuText>
       <LogOutBtn type="button" onClick={handleLogOut}>
         Log out
       </LogOutBtn>
