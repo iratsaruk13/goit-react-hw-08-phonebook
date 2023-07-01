@@ -23,8 +23,8 @@ const AppBar = () => {
           <UserMenu />
         ) : (
           <Authorization>
-            <AppNavLink to="/register">Sign up</AppNavLink>
-            <AppNavLink to="/login">Log in</AppNavLink>
+            <AppNavLink to="/register">Sign Up</AppNavLink>
+            <AppNavLink to="/login">Log In</AppNavLink>
           </Authorization>
         )}
       </NavAppBar>

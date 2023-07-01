@@ -13,7 +13,7 @@ const UserMenu = () => {
     <UserMenuWrapper>
       <UserMenuText> Welcome, {user.name}</UserMenuText>
       <LogOutBtn type="button" onClick={handleLogOut}>
-        Log out
+        Log Out
       </LogOutBtn>
     </UserMenuWrapper>
   );

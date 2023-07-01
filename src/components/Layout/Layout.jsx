@@ -3,6 +3,7 @@ import AppBar from "components/AppBar/AppBar";
 import { Loader } from "components/Loader/Loader";
 import React, { Suspense } from "react";
 import { Outlet } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
 
 export const Layout = () => {
   return (
@@ -14,6 +15,7 @@ export const Layout = () => {
           <Outlet />
         </main>
       </Suspense>
+      <ToastContainer position="top-center" />
     </Container>
   );
 };

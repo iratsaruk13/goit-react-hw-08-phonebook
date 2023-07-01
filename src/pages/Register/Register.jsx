@@ -63,7 +63,7 @@ export default function Register() {
         {errors.password && <Error> {errors.password?.message}</Error>}
       </FormGroup>
       <FormButton type="submit">
-        <FormButtonSpan>Sigh up </FormButtonSpan>
+        <FormButtonSpan>Sigh Up </FormButtonSpan>
         <FormButtonSvg viewBox="0 0 13 10" height="10px" width="15px">
           <path d="M1,5 L11,5"></path>
           <polyline points="8 1 12 5 8 9"></polyline>
